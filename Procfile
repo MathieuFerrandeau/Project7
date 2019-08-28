@@ -1,2 +1,1 @@
-web: gunicorn fbapp:app
-init: FLASK_APP=app.py
+web: gunicorn app:app
