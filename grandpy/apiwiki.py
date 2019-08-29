@@ -1,3 +1,4 @@
+"""wikipedia module"""
 import wikipedia
 
 
@@ -17,10 +18,10 @@ class Wiki:
                 "url": wiki_page.url
             }
 
-        except (wikipedia.exceptions.PageError):
+        except wikipedia.exceptions.PageError:
             return "no result"
 
-        except (wikipedia.exceptions.DisambiguationError):
+        except wikipedia.exceptions.DisambiguationError:
             try:
                 wiki_search = wikipedia.geosearch(lat, lng, question)
                 wiki_page = wikipedia.page(wiki_search[0])
@@ -33,5 +34,5 @@ class Wiki:
             except IndexError:
                 return "no result"
 
-            except (wikipedia.exceptions.DisambiguationError):
+            except wikipedia.exceptions.DisambiguationError:
                 return "no result"

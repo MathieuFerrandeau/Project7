@@ -1,3 +1,4 @@
+"""Main file"""
 import os
 from flask import Flask, render_template, request, jsonify
 
@@ -6,7 +7,7 @@ from grandpy.gmaps import GMaps
 from grandpy.parseur import Parseur
 from grandpy.stop_word import STOP_WORDS
 from grandpy.messages import *
-from config import API_KEY
+from config import API_KEY, ADDRESS_MSG, SUMMARY_MSG, FAILURE_MSG
 
 
 
@@ -22,6 +23,7 @@ wiki = Wiki()
 
 @app.route('/_get_json')
 def get_json():
+    """Recover in json format informations to return"""
     user_input = request.args.get("question", type=str)
     parsed_input = parser.get_relevant_word(user_input)
     if parsed_input == "":
@@ -57,7 +59,7 @@ def get_json():
 @app.route('/')
 @app.route('/home')
 def index():
-
+    """Show home page"""
     return render_template('home.html', api_key=google_api_key)
 
 

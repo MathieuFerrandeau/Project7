@@ -2,9 +2,8 @@ from grandpy.apiwiki import *
 
 
 class TestApiWiki:
-
+    
     def test_result(self, monkeypatch):
-
         result = {
             "title": "Paris",
             "summary": "Capitale de la France"

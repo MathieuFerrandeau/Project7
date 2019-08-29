@@ -1,3 +1,4 @@
+"""Googlemaps module"""
 import googlemaps
 
 
