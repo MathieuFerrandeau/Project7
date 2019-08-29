@@ -15,7 +15,7 @@ SUMMARY_MSG = [
 
 FAILURE_MSG = [
     "Ça ne me dit rien du tout, fais attention à l'orthographe da ta recherche",
-    "je n'ai pas de connaissance à ce sujet-là, fais attention à l'orthographe de ta recherche"
+    "je n'ai pas de connaissance à ce sujet-là, attention à l'orthographe de ta recherche"
 ]
 
 with open('key.txt', 'r') as texte:
